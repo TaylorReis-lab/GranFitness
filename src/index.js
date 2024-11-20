@@ -1,12 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
 
+import { Home } from './containers/Home'
 import Globalstyles from './styles/globalstyles'
 
 ReactDOM.render(
   <>
     <React.StrictMode>
-      <App />
+      <Home />
     </React.StrictMode>
     <Globalstyles />
   </>,

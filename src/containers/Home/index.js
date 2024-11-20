@@ -13,16 +13,16 @@ export function Home() {
           <div className="mbr-video-foreground">
             <ReactPLayer
               className="mbr-video-foreground"
-              width="100%"
-              height="100%"
-              allow="muted; autoplay; picture-in-picture;"
-              allowfullscreen
+              width="1920px"
+              height="960px"
               playing={true}
-              url="https://www.youtube.com/embed/V9PVRfjEBTI?si=XJkAprwBYq7dNjUg&amp;"
+              muted={true}
+              loop={true}
+              url="https://www.youtube.com/embed/v87-LOxRKPc?start=2"
             />
           </div>
-          <div class="conteiner-text">
-            <div class="text">
+          <div className="conteiner-text">
+            <div className="text">
               <strong>
                 Sejam bem-vindos ao centro de treinamento Gran Fitness
               </strong>

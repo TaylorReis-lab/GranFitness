@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Container, HumburguerMenu, Nav, NavbarMenu, NavLogo } from './styled'
 
 export function Header() {

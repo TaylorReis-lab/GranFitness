@@ -1,5 +1,16 @@
 import styled from 'styled-components'
 
+export const ContainerBackgraound = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background-color: rgba(0, 0, 0);
+`
+
 export const ContainerVideo = styled.div`
   .mbr-video-foreground {
     position: absolute;
@@ -7,8 +18,6 @@ export const ContainerVideo = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-
-    height: 100vh;
     pointer-events: none;
     overflow: hidden;
     object-fit: cover;
@@ -23,8 +32,8 @@ export const ContainerVideo = styled.div`
     pointer-events: none;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     transform: scale(1.2);
     object-fit: cover;
   }
@@ -49,5 +58,3 @@ export const ContainerVideo = styled.div`
     margin: 10px 0;
   }
 `
-
-export const ContainerBackgraound = styled.div``

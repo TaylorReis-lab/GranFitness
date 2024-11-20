@@ -9,21 +9,21 @@ const breakpoints = {
 
 const responsiveStyles = css`
   @media (max-width: ${breakpoints.tablet}) {
-    /* Ajustes gerais para telas menores */
-    height: 80px;
-    padding: 0 20px;
-
-    NavLogo {
-      height: 4rem; /* Tamanho reduzido para imagens */
-    }
-
     Nav,
-    NavbarMenu.ul {
+    .navbar-collapse ul {
       flex-direction: column;
       align-items: center;
     }
 
-    NavbarMenu {
+    .navbar-collapse ul li {
+      margin: 10px 0;
+    }
+
+    .header.open {
+      background-color: #000000;
+    }
+
+    .navbar-collapse {
       display: none;
       flex-direction: column;
       width: 100%;
@@ -33,7 +33,7 @@ const responsiveStyles = css`
       left: 0;
     }
 
-    NavbarMenu.open {
+    .navbar-collapse.open {
       display: flex;
       animation: fadeIn 0.5s ease-in-out;
       z-index: 1;
@@ -47,7 +47,8 @@ const responsiveStyles = css`
   @media (max-width: ${breakpoints.mobile}) {
     /* Ajustes adicionais para telas bem pequenas */
     img {
-      height: 3.5rem;
+      height: 4rem;
+      margin-left: 8px;
     }
   }
 `
@@ -61,13 +62,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-
-  .container-fixed {
-    position: sticky;
-    background-color: #000000;
-  }
-
+  z-index: 1;
   ${responsiveStyles}
 `
 
@@ -77,6 +72,15 @@ export const Nav = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
+
+  .burguer {
+    background-color: #000000;
+  }
+
+  .container-fixed {
+    position: sticky;
+    background-color: #000000;
+  }
 
   ${responsiveStyles}
 `
@@ -100,6 +104,7 @@ export const NavbarMenu = styled.div`
     display: flex;
     justify-content: center;
     padding: 0;
+    margin-top: 18px;
   }
   a {
     font-size: 19px;
@@ -121,6 +126,7 @@ export const HumburguerMenu = styled.div`
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
+  margin-right: 8px;
 
   span {
     height: 3px;

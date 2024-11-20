@@ -7,8 +7,8 @@ import { ContainerBackgraound, ContainerVideo } from './styles'
 export function Home() {
   return (
     <>
-      <Header />
       <ContainerBackgraound>
+        <Header />
         <ContainerVideo>
           <div className="mbr-video-foreground">
             <ReactPLayer

@@ -2,73 +2,84 @@ import React, { useEffect, useRef } from 'react'
 import { Container, HumburguerMenu, Nav, NavbarMenu, NavLogo } from './styled'
 
 export function Header() {
-   const headerRef = useRef(null)
-   const logoRef = useRef(null)
+  const headerRef = useRef(null)
+  const logoRef = useRef(null)
+  const menuburguerRef = useRef(null)
+  const navbarMenuRef = useRef(null)
 
-   useEffect(() => {
-     const header = headerRef.current
-     const logo = logoRef.current
+  useEffect(() => {
+    const header = headerRef.current
+    const logo = logoRef.current
+    const menuburguer = menuburguerRef.current
+    const navbarmenu = navbarMenuRef.current
 
-     // Função para manipulação do header ao rolar a página
-     const handleHeaderScroll = () => {
-       const scrollPosition = window.scrollY
+    // Função para manipulação do header ao rolar a página
+    const handleHeaderScroll = () => {
+      const scrollPosition = window.scrollY
 
-       if (scrollPosition > 50) {
-         header.classList.add('container-fixed')
-         logo.style.height = '5rem'
-       } else if (scrollPosition <= 80) {
-         header.classList.remove('container-fixed')
-         logo.style.height = '8rem'
-       }
-     }
+      if (scrollPosition > 50) {
+        header.classList.add('container-fixed')
+        logo.style.height = '5rem'
+      } else if (scrollPosition <= 80) {
+        header.classList.remove('container-fixed')
+        logo.style.height = '8rem'
+      }
+    }
+    // Função para o menu hambúrguer
+    const handleHamburgerClick = () => {
+      menuburguer.classList.toggle('open')
+      navbarmenu.classList.toggle('open')
+      header.classList.toggle('burguer')
+    }
 
-     // Função para animações de elementos ao rolar a página
-     const handleScrollAnimations = () => {
-       const scrollingElements = document.querySelectorAll('.scrolling')
+    // Função para animações de elementos ao rolar a página
+    const handleScrollAnimations = () => {
+      const scrollingElements = document.querySelectorAll('.scrolling')
 
-       scrollingElements.forEach(element => {
-         element.classList.add('hidden')
-       })
+      scrollingElements.forEach(element => {
+        element.classList.add('hidden')
+      })
 
-       const isInViewport = element => {
-         const rect = element.getBoundingClientRect()
-         return (
-           rect.top >= 0 &&
-           rect.left >= 0 &&
-           rect.bottom <=
-             (window.innerHeight || document.documentElement.clientHeight) &&
-           rect.right <=
-             (window.innerWidth || document.documentElement.clientWidth)
-         )
-       }
+      const isInViewport = element => {
+        const rect = element.getBoundingClientRect()
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        )
+      }
 
-       const onScroll = () => {
-         scrollingElements.forEach(element => {
-           if (isInViewport(element)) {
-             element.classList.add('scroll-in-view')
-             element.classList.remove('hidden')
-           }
-         })
-       }
+      const onScroll = () => {
+        scrollingElements.forEach(element => {
+          if (isInViewport(element)) {
+            element.classList.add('scroll-in-view')
+            element.classList.remove('hidden')
+          }
+        })
+      }
 
-       window.addEventListener('scroll', onScroll)
-       onScroll() // Para elementos já na viewport ao carregar a página
-     }
+      window.addEventListener('scroll', onScroll)
+      onScroll() // Para elementos já na viewport ao carregar a página
+    }
 
-     // Adiciona eventos
-     window.addEventListener('scroll', handleHeaderScroll)
-     handleScrollAnimations()
+    // Adiciona eventos
+    window.addEventListener('scroll', handleHeaderScroll)
+    handleScrollAnimations()
+    menuburguer.addEventListener('click', handleHamburgerClick)
 
-     // Limpa eventos ao desmontar o componente
-     return () => {
-       window.removeEventListener('scroll', handleHeaderScroll)
-     }
-   }, [])
-
+    // Limpa eventos ao desmontar o componente
+    return () => {
+      window.removeEventListener('scroll', handleHeaderScroll)
+      menuburguer.removeEventListener('click', handleHamburgerClick)
+    }
+  }, [])
 
   return (
-    <Container ref={headerRef}>
-      <Nav className="header">
+    <Container>
+      <Nav ref={headerRef} className="header">
         <NavLogo ref={logoRef} className="navbar-logo">
           <img
             id="logo"
@@ -76,12 +87,16 @@ export function Header() {
             alt="image-logo"
           />
         </NavLogo>
-        <HumburguerMenu id="hamburger-menu">
+        <HumburguerMenu ref={menuburguerRef} id="hamburger-menu">
           <span></span>
           <span></span>
           <span></span>
         </HumburguerMenu>
-        <NavbarMenu className="navbar-collapse" id="navbar-menu">
+        <NavbarMenu
+          ref={navbarMenuRef}
+          className="navbar-collapse"
+          id="navbar-menu"
+        >
           <ul className="justify-content-end">
             <li>
               <a href="/index.html">Home</a>

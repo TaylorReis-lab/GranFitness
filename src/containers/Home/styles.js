@@ -5,7 +5,7 @@ export const ContainerBackgraound = styled.div`
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.75);
 `
 
 export const ContainerVideo = styled.div`

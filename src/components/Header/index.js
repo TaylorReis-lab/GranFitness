@@ -18,10 +18,10 @@ export function Header() {
       const scrollPosition = window.scrollY
 
       if (scrollPosition > 50) {
-        header.classList.add('container-fixed')
+        header.classList.add('header-fixed')
         logo.style.height = '5rem'
       } else if (scrollPosition <= 80) {
-        header.classList.remove('container-fixed')
+        header.classList.remove('header-fixed')
         logo.style.height = '8rem'
       }
     }
@@ -78,8 +78,8 @@ export function Header() {
   }, [])
 
   return (
-    <Container>
-      <Nav ref={headerRef} className="header">
+    <Container className="header" ref={headerRef}>
+      <Nav>
         <NavLogo ref={logoRef} className="navbar-logo">
           <img
             id="logo"

@@ -19,10 +19,6 @@ const responsiveStyles = css`
       margin: 10px 0;
     }
 
-    .header.open {
-      background-color: #000000;
-    }
-
     .navbar-collapse {
       display: none;
       flex-direction: column;
@@ -39,6 +35,10 @@ const responsiveStyles = css`
       z-index: 1;
     }
 
+    .header.open {
+      background-color: #000000;
+    }
+
     #hamburger-menu {
       display: flex;
     }
@@ -49,6 +49,9 @@ const responsiveStyles = css`
     img {
       height: 4rem;
       margin-left: 8px;
+    }
+    .header {
+      padding: 10px 20px;
     }
   }
 `
@@ -62,7 +65,17 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 15;
+
+  .container-fixed {
+    position: sticky;
+    background-color: #000000;
+  }
+
+  .burguer {
+    background-color: #000000;
+  }
+
   ${responsiveStyles}
 `
 
@@ -72,15 +85,6 @@ export const Nav = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-
-  .burguer {
-    background-color: #000000;
-  }
-
-  .container-fixed {
-    position: sticky;
-    background-color: #000000;
-  }
 
   ${responsiveStyles}
 `
@@ -134,10 +138,6 @@ export const HumburguerMenu = styled.div`
     background: white;
     margin: 4px;
     transition: all 0.3s ease;
-  }
-
-  .burguer {
-    background-color: #000000;
   }
 
   .hamburger-menu.open span:nth-child(1) {

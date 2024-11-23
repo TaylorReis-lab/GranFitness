@@ -28,7 +28,7 @@ export const ButtonDownload = styled.div`
   position: relative;
   height: 48px;
   width: 48px;
-  margin: auto;
+  margin-left: 20px;
   border-radius: 100%;
   background: ${({ load, done }) =>
     done ? '#0077FF' : load ? 'rgba(0, 119, 255, 0.2)' : '#E8EAED'};

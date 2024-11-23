@@ -20,5 +20,10 @@ export const Section = styled.div`
   }
 `
 
-export const Button = styled.button`
+export const ContainerButton = styled.div`
+  display: flex;
+  justify-content: start;
+  h1 {
+    color: #ffff;
+  }
 `

@@ -1,13 +1,20 @@
 import React from 'react'
 
-import { Section, Container } from './styles'
+import { Section, Container, ContainerButton } from './styles'
 import { Header, Footer, Button } from '../../components'
 
 export function Terms() {
   return (
     <Container>
       <Header />
-      <Button />
+      <ContainerButton>
+        <h1>Download Termos e Condições</h1>
+        <Button
+          downloadLink="https://drive.google.com/uc?export=download&id=1-izTXy-sDq0fUwQKmWoN7veO3Bn4IEls"
+          fileName="Termos-e-condições.pdf"
+        />
+      </ContainerButton>
+
       <Section className="terms">
         <div id="container-terms" class="title col-md-12 col-lg-12">
           <h3>

@@ -73,6 +73,10 @@ export const Container = styled.div`
 
   .footer-list span:hover::after,
   .footer-social span:hover::after {
-    width: 100%;
+    width: 40%;
+  }
+
+  .instagram-dev {
+    text-decoration: none;
   }
 `

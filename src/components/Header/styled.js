@@ -39,7 +39,7 @@ const responsiveStyles = css`
       background-color: #000000;
     }
 
-    #hamburger-menu {
+    .hamburger-menu {
       display: flex;
     }
   }
@@ -47,8 +47,9 @@ const responsiveStyles = css`
   @media (max-width: ${breakpoints.mobile}) {
     /* Ajustes adicionais para telas bem pequenas */
     img {
-      height: 4rem;
-      margin-left: 8px;
+      height: 5rem;
+      margin-left: 12px;
+      margin-top: 20px;
     }
     .header {
       padding: 10px 20px;
@@ -57,23 +58,22 @@ const responsiveStyles = css`
 `
 
 export const Container = styled.div`
+  position: ${({ isFixed }) => (isFixed ? 'fixed' : 'relative')};
   top: 0;
-  height: 110px;
+  left: 0;
+  height: ${({ isFixed }) => (isFixed ? '85px' : '110px')};
   width: 100%;
   margin: auto;
-  transition: all 0.4s ease;
+  transition: background-color 500ms ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 15;
+  z-index: 999;
+  background-color: ${({ isFixed }) => (isFixed ? '#000000' : 'transparent')};
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 
-  .container-fixed {
-    position: sticky;
-    background-color: #000000;
-  }
-
-  .burguer {
-    background-color: #000000;
+  &.parent-container {
+    overflow: visible;
   }
 
   ${responsiveStyles}
@@ -91,7 +91,7 @@ export const Nav = styled.div`
 
 export const NavLogo = styled.div`
   img {
-    height: 7rem;
+    height: ${({ isFixed }) => (isFixed ? '5rem' : '7rem')};
     text-align: start;
     transition: all 0.4s ease;
   }
@@ -103,6 +103,7 @@ export const NavbarMenu = styled.div`
   flex-grow: 1;
   display: flex;
   justify-content: center;
+
   ul {
     list-style-type: none;
     display: flex;
@@ -140,15 +141,15 @@ export const HumburguerMenu = styled.div`
     transition: all 0.3s ease;
   }
 
-  .hamburger-menu.open span:nth-child(1) {
+  &.open span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
   }
 
-  .hamburger-menu.open span:nth-child(2) {
+  &.open span:nth-child(2) {
     opacity: 0;
-  }
+  } 
 
-  .hamburger-menu.open span:nth-child(3) {
+  &.open span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
 

@@ -43,7 +43,7 @@ export function Footer() {
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <h5 class="footer-title scrolling scrolling-animate">
+            <h5 className="footer-title scrolling scrolling-animate">
               REDES SOCIAIS
             </h5>
             <ul class="footer-social scrolling scrolling-animate">
@@ -70,15 +70,15 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div class="footer-bottom scrolling-animate">
+        <div className="footer-bottom scrolling-animate instagram-dev">
           <p>
-            © Copyright Todos os direitos reservados Gran Fitness | Site by
+            © Copyright Todos os direitos reservados - {new Date().getFullYear()} | Site by
             <a
               href="https://www.instagram.com/taylor__reis/"
               target="_blank"
               rel="noreferrer"
             >
-              @Taylor__Reis
+            @Taylor__Reis
             </a>
           </p>
         </div>

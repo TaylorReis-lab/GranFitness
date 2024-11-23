@@ -91,7 +91,7 @@ export const Nav = styled.div`
 
 export const NavLogo = styled.div`
   img {
-    height: 5rem;
+    height: 7rem;
     text-align: start;
     transition: all 0.4s ease;
   }

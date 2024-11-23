@@ -83,7 +83,7 @@ export function Header() {
         <NavLogo ref={logoRef} className="navbar-logo">
           <img
             id="logo"
-            src="https://cdn.discordapp.com/attachments/1308748375138504754/1308752193876398191/soon.png?ex=673f15f6&is=673dc476&hm=7e3d573d09f5ee27a9ac5041a3af7ac5a2a52539e4f8deeb0592e06e8b86c542&"
+            src="https://media.discordapp.net/attachments/1308748375138504754/1308752193876398191/soon.png?ex=67430a76&is=6741b8f6&hm=0936460ec6576a624ec9bee57873af29b4097fb4d109898995f8700848124546&=&format=webp&quality=lossless"
             alt="image-logo"
           />
         </NavLogo>

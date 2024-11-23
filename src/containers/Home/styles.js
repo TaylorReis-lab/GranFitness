@@ -1,4 +1,65 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const breakpoints = {
+  mobile: '480px',
+  tablet: '768px',
+  computer: '1200px'
+}
+
+const responsiveStyles = css`
+  @media (max-width: ${breakpoints.computer}) {
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .text strong {
+      font-size: 2.5rem;
+    }
+    .text p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    main {
+      margin-top: 11.5rem;
+    }
+    .text strong {
+      font-size: 2rem;
+    }
+    .text p {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    .conteiner-text {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      padding-top: 6rem;
+    }
+    .text h1 {
+      font-size: 1.75rem;
+    }
+    .text p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .conteiner-text {
+      height: 60vh;
+    }
+    .text h1 {
+      font-size: 1.5rem;
+    }
+    .text p {
+      font-size: 0.875rem;
+    }
+  }
+`
 
 export const ContainerBackgraound = styled.div`
   margin: 0 0 0 0;
@@ -54,4 +115,6 @@ export const ContainerVideo = styled.div`
     font-size: 1.5rem;
     margin: 10px 0;
   }
+
+  ${responsiveStyles}
 `

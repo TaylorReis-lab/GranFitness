@@ -99,10 +99,13 @@ export function Header() {
               <a href="/planos.html">Planos</a>
             </li>
             <li>
-              <a href="/planos.html#content-faq">Dúvidas Frequentes</a>
+              <a href="/planos.html#content-faq">Dúvidas</a>
             </li>
             <li>
               <a href="/termos-condicoes.html">Termos e Condições</a>
+            </li>
+            <li>
+              <a href="/termos-condicoes.html">Politicas de Privacidade</a>
             </li>
           </ul>
         </NavbarMenu>

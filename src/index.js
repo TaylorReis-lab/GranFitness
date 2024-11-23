@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Home } from './containers/Home'
+import Routes from './routes/routes'
 import Globalstyles from './styles/globalstyles'
 
 ReactDOM.render(
   <>
     <React.StrictMode>
-      <Home />
+      <Routes />
     </React.StrictMode>
     <Globalstyles />
   </>,

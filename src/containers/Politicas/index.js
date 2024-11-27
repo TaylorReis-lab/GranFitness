@@ -3,14 +3,14 @@ import React from 'react'
 import { Section, Container, ContainerButton } from './styles'
 import { Header, Footer, Button } from '../../components'
 
-export function Terms() {
+export function Politicas() {
   return (
     <Container>
       <Header />
       <ContainerButton>
         <Button
           downloadLink="https://drive.google.com/uc?export=download&id=1-izTXy-sDq0fUwQKmWoN7veO3Bn4IEls"
-          fileName="Termos-e-condições.pdf"
+          fileName="Politica-de-Privaidade.pdf"
         />
       </ContainerButton>
 
@@ -18,7 +18,7 @@ export function Terms() {
         <div id="container-terms" class="title col-md-12 col-lg-12">
           <h3>
             <strong>
-              <em>TERMOS E CONDIÇÕES</em>
+              <em>Politica de Privacidade</em>
             </strong>
           </h3>
           <h4 class="mbr-section-subtitle align-center">

@@ -48,7 +48,7 @@ export function Footer() {
             </h5>
             <ul class="footer-social scrolling scrolling-animate">
               <li>
-                <a href="https://wa.me/5564992540287?text=Ol%C3%A1,%20gostaria%20de%20fazer%20algumas%20perguntas.">
+                <a href="https://wa.me/5564992540287?text=Ol%C3%A1,%20gostaria%20de%20fazer%20algumas%20perguntas">
                   <img
                     src="https://www.vectorlogo.zone/logos/whatsapp/whatsapp-tile.svg"
                     alt="Whatsapp"

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header, Footer, Cards } from '../../components'
+import { Header, Footer, Cards, Questions } from '../../components'
 import { ContainerBackgraound, ContainerMain } from './styles'
 
 export function Planos() {
@@ -61,6 +61,7 @@ export function Planos() {
         `}
           />
         </ContainerMain>
+        <Questions />
         <Footer />
       </ContainerBackgraound>
     </>

@@ -13,7 +13,6 @@ import styled from 'styled-components'
 export const ContainerBackgraound = styled.div`
   margin: 0 0 0 0;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.75);
 `

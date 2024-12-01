@@ -1,19 +1,20 @@
 import React from 'react'
 
 import { Header, Footer, Cards, Questions } from '../../components'
-import { ContainerBackgraound, ContainerMain } from './styles'
+import { ContainerBackgraound, ContainerMain, BackgroundImage } from './styles'
 
 export function Planos() {
   return (
     <>
-      <ContainerBackgraound>
-        <Header />
-        <ContainerMain>
-          <h1>PLANOS GRAN FITNESS</h1>
-          <Cards
-            image="https://via.placeholder.com/300"
-            name="Plano Mensal"
-            description={`
+      <BackgroundImage>
+        <ContainerBackgraound>
+          <Header />
+          <ContainerMain>
+            <h1>PLANOS GRAN FITNESS</h1>
+            <Cards
+              image="https://via.placeholder.com/300"
+              name="Plano Mensal"
+              description={`
           <h2 class="scrolling scrolling-animate">
             Plano Mensal
           </h2>
@@ -21,11 +22,11 @@ export function Planos() {
           <p class="scrolling scrolling-animate">Taxa única de Matrícula: R$ 20,00</p>
           <p class="scrolling scrolling-animate">Primeira Cobrança: R$ 100,00</p>
         `}
-          />
-          <Cards
-            image="https://via.placeholder.com/300"
-            name="Plano Fidelidade 4 meses"
-            description={`
+            />
+            <Cards
+              image="https://via.placeholder.com/300"
+              name="Plano Fidelidade 4 meses"
+              description={`
           <h2 class="scrolling scrolling-animate">
             Plano Fidelidade 4 Meses
           </h2>
@@ -40,11 +41,11 @@ export function Planos() {
             Demais Mensalidades: R$ 100,00
           </p>
         `}
-          />
-          <Cards
-            image="https://via.placeholder.com/300"
-            name="Plano Anual"
-            description={`
+            />
+            <Cards
+              image="https://via.placeholder.com/300"
+              name="Plano Anual"
+              description={`
           <h2 class="scrolling scrolling-animate">
             Plano Fidelidade 12 Meses
           </h2>
@@ -59,11 +60,12 @@ export function Planos() {
             Demais Mensalidades: R$ 90,00
           </p>
         `}
-          />
-        </ContainerMain>
-        <Questions />
-        <Footer />
-      </ContainerBackgraound>
+            />
+          </ContainerMain>
+          <Questions />
+          <Footer />
+        </ContainerBackgraound>
+      </BackgroundImage>
     </>
   )
 }

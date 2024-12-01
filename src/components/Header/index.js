@@ -102,7 +102,7 @@ export function Header() {
               <Link to="/planos">Planos</Link>
             </li>
             <li>
-              <Link to="/planos.html#content-faq">Dúvidas</Link>
+              <Link to="/planos#duvidas">Dúvidas</Link>
             </li>
             <li>
               <Link to="/termos-de-condicoes">Termos e Condições</Link>

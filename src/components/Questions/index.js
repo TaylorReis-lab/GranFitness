@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { Collapse } from '../../utilits'
 
 import { Container } from './styled'
 
 export function Questions() {
+  const location = useLocation()
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' }) // Faz o scroll suave
+      }
+    }
+  }, [location])
   return (
     <Container>
-      <h1>PERGUNTAS FREQUENTES</h1>
+      <h1 id='duvidas'>PERGUNTAS FREQUENTES</h1>
       <Collapse title="QUANTO É A MENSALIDADE DA GRAN FITNESS?">
         <p>
           A Gran Fitness trabalha com planos de fidelidade de 4 e 12 meses.
@@ -135,10 +145,7 @@ export function Questions() {
         </p>
       </Collapse>
       {/* <!-- Pergunta 4 --> */}
-      <Collapse
-        title="QUAIS SÃO OS DIAS E HORÁRIOS DE FUNCIONAMENTO DA GRAN
-                FITNESS?"
-      >
+      <Collapse title="QUAIS SÃO OS DIAS E HORÁRIOS DE FUNCIONAMENTO DA GRAN FITNESS?">
         <p>
           Segunda-feira 06:00 - 22:00 <br /> Terça-feira 06:00 - 22:00 <br />
           Quarta-feira 06:00 - 22:00 <br /> Quinta-feira 06:00 - 22:00 <br />

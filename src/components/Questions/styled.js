@@ -7,8 +7,16 @@ export const Container = styled.div`
   background-color: transparent;
   width: 100%;
   color: #ffff;
+  h1 {
+    margin: 20px 0;
+  }
   a {
     color: #f0a500;
     text-decoration: none;
+  }
+  p {
+    text-align: left;
+    font-weight: 400;
+    font-size: 17px;
   }
 `

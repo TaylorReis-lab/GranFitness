@@ -2,7 +2,7 @@ import React from 'react'
 import ReactPLayer from 'react-player'
 
 import { Header, Footer } from '../../components'
-import { ContainerBackgraound, ContainerVideo } from './styles'
+import { ContainerBackgraound, ContainerVideo, BackgroundImage } from './styles'
 
 export function Home() {
   return (
@@ -35,6 +35,7 @@ export function Home() {
           </div>
         </ContainerVideo>
       </ContainerBackgraound>
+      <BackgroundImage></BackgroundImage>
       <Footer />
     </>
   )

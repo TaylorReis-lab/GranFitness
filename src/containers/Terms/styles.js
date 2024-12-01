@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: #00000094;
+  background-color: #00000098;
 `
 
 export const Section = styled.div`
@@ -23,5 +23,5 @@ export const Section = styled.div`
 export const ContainerButton = styled.div`
   display: flex;
   z-index: 1000;
-  position: static;
+  position: fixed;
 `

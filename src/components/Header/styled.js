@@ -41,6 +41,7 @@ const responsiveStyles = css`
 
     .hamburger-menu {
       display: flex;
+      margin-right: 15px;
     }
   }
 
@@ -92,6 +93,7 @@ export const Nav = styled.div`
 export const NavLogo = styled.div`
   img {
     height: ${({ isFixed }) => (isFixed ? '5rem' : '7rem')};
+    margin-left: ${({ isFixed }) => (isFixed ? '20px' : 'none')};
     text-align: start;
     transition: all 0.4s ease;
   }

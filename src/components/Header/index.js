@@ -42,7 +42,7 @@ export function Header() {
           <Link to="/">
             <img
               id="logo"
-              src="https://media.discordapp.net/attachments/1308748375138504754/1308752193876398191/soon.png?ex=67430a76&is=6741b8f6&hm=0936460ec6576a624ec9bee57873af29b4097fb4d109898995f8700848124546&=&format=webp&quality=lossless"
+              src="https://i.ibb.co/GR63V9n/soon.png"
               alt="image-logo"
             />
           </Link>

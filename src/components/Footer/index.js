@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from './styles'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export function Footer() {
   return (
@@ -13,14 +14,14 @@ export function Footer() {
             <ul className="footer-list scrolling scrolling-animate">
               <li>
                 <span>
-                  <a href="/termos-condicoes">Termos e Condições</a>
+                  <Link to="/termos-de-condicoes">Termos e Condições</Link>
                 </span>
               </li>
               <li>
                 <span>
-                  <a href="/Politicas-de-privacidade">
+                  <Link to="/politica-de-privacidade">
                     Política de Privacidade
-                  </a>
+                  </Link>
                 </span>
               </li>
             </ul>
@@ -32,12 +33,12 @@ export function Footer() {
             <ul class="footer-list scrolling scrolling-animate">
               <li>
                 <span>
-                  <a href="/planos">Planos</a>
+                  <Link to="/planos">Nossos Planos</Link>
                 </span>
               </li>
               <li>
                 <span>
-                  <a href="/planos#content-faq ">Faq</a>
+                  <Link to="/planos#duvidas">Duvidas Frequentes</Link>
                 </span>
               </li>
             </ul>
@@ -72,13 +73,14 @@ export function Footer() {
         </div>
         <div className="footer-bottom scrolling-animate instagram-dev">
           <p>
-            © Copyright Todos os direitos reservados - {new Date().getFullYear()} | Site by
+            © Copyright Todos os direitos reservados -{' '}
+            {new Date().getFullYear()} | Site by
             <a
               href="https://www.instagram.com/taylor__reis/"
               target="_blank"
               rel="noreferrer"
             >
-            @Taylor__Reis
+              @Taylor__Reis
             </a>
           </p>
         </div>

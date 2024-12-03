@@ -12,7 +12,7 @@ export function Planos() {
           <ContainerMain>
             <h1>PLANOS GRAN FITNESS</h1>
             <Cards
-              image="https://via.placeholder.com/300"
+              image="https://i.ibb.co/JcpfyTS/plan-month.png"
               name="Plano Mensal"
               description={`
           <h2 class="scrolling scrolling-animate">
@@ -24,7 +24,7 @@ export function Planos() {
         `}
             />
             <Cards
-              image="https://via.placeholder.com/300"
+              image="https://i.ibb.co/k2Z4qwr/plan-four-month.png"
               name="Plano Fidelidade 4 meses"
               description={`
           <h2 class="scrolling scrolling-animate">
@@ -43,7 +43,7 @@ export function Planos() {
         `}
             />
             <Cards
-              image="https://via.placeholder.com/300"
+              image="https://i.ibb.co/555GfNb/plan-twelve-months.png"
               name="Plano Anual"
               description={`
           <h2 class="scrolling scrolling-animate">

@@ -1,14 +1,20 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
-// const breakpoints = {
-//   mobile: '480px',
-//   tablet: '768px',
-//   computer: '1200px'
-// }
+const breakpoints = {
+  mobile: '480px',
+  tablet: '768px',
+  computer: '1200px'
+}
 
-// const responsiveStyles = css`
-
-// `
+const responsiveStyles = css`
+  @media (max-width: ${breakpoints.tablet}) {
+    .containerplans {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+`
 
 export const ContainerBackgraound = styled.div`
   margin: 0 0 0 0;
@@ -31,4 +37,6 @@ export const ContainerMain = styled.div`
   display: grid;
   justify-items: center;
   color: #ffff;
+
+  ${responsiveStyles}
 `

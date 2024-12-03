@@ -59,23 +59,6 @@ export const Container = styled.div`
     justify-content: center;
   }
 
-  .footer-list span::after,
-  .footer-social span::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    left: 0;
-    background: #fff;
-    transition: width 0.3s ease;
-  }
-
-  .footer-list span:hover::after,
-  .footer-social span:hover::after {
-    width: 40%;
-  }
-
   .instagram-dev {
     text-decoration: none;
   }

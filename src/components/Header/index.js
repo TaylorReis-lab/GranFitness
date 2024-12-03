@@ -25,41 +25,7 @@ export function Header() {
       header.classList.toggle('burguer')
     }
 
-    // Função para animações de elementos ao rolar a página
-    const handleScrollAnimations = () => {
-      const scrollingElements = document.querySelectorAll('.scrolling')
-
-      scrollingElements.forEach(element => {
-        element.classList.add('hidden')
-      })
-
-      const isInViewport = element => {
-        const rect = element.getBoundingClientRect()
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <=
-            (window.innerWidth || document.documentElement.clientWidth)
-        )
-      }
-
-      const onScroll = () => {
-        scrollingElements.forEach(element => {
-          if (isInViewport(element)) {
-            element.classList.add('scroll-in-view')
-            element.classList.remove('hidden')
-          }
-        })
-      }
-
-      window.addEventListener('scroll', onScroll)
-      onScroll() // Para elementos já na viewport ao carregar a página
-    }
-
     window.addEventListener('scroll', handleScroll)
-    handleScrollAnimations()
     menuburguer.addEventListener('click', handleHamburgerClick)
 
     // Limpa eventos ao desmontar o componente
